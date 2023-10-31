@@ -11,7 +11,8 @@ public class PlayerMovement : MonoBehaviour
     private float speed;
     private float limitSuperior;
     private float limitInferior;
-    public int player_lives = 4;
+    public int player_lives = 3;
+    public float player_puntaj = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +51,11 @@ public class PlayerMovement : MonoBehaviour
         if (other.tag == "Candy")
         {
             CandyGenerator.instance.ManageCandy(other.gameObject.GetComponent<CandyController>(), this);
+        }
+        else if (other.tag == "Enemy")
+        {
+            EnemyGenerator.instance.ManageEnemy(other.gameObject.GetComponent<EnemyController>(), this);
+           
         }
     }
 }
