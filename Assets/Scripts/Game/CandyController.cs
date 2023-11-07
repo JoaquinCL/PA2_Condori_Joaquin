@@ -5,7 +5,8 @@ using UnityEngine;
 public class CandyController : MonoBehaviour
 {
     public int frame;
-    public int lifeChanges;
+    //public int lifeChanges;
+    public int PointsChanges;
 
     void Update()
     {

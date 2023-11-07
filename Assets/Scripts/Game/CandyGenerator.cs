@@ -60,15 +60,13 @@ public class CandyGenerator : MonoBehaviour
             SceneManager.LoadScene("GameOver");
             return;
         }
-        int lives = player_script.player_lives;
-        int live_changer = candy_script.lifeChanges;
-        lives += live_changer;
-        print(lives);
-        if (lives <= 0)
-        {
-            SceneManager.LoadScene("GameOver");
-        }
-        player_script.player_lives = lives;
+       // int Points = player_script.player_Points;
+        //int lives = player_script.player_lives;
+        //int live_changer = candy_script.lifeChanges;
+        int Points_changer = candy_script.PointsChanges;
+        //lives += live_changer;
+        //Points += Points_Changer;
+        //player_script.player_Points = Points;
         Destroy(candy_script.gameObject);
     }
 

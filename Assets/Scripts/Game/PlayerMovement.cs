@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private float limitSuperior;
     private float limitInferior;
     public int player_lives = 3;
-    public float player_puntaj = 0;
+    public float player_Points = 0;
     // Start is called before the first frame update
     void Start()
     {
