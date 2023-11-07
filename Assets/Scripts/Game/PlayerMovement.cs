@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private float speed;
     private float limitSuperior;
     private float limitInferior;
+    private Vector3 startPosition; 
     public int player_lives = 3;
     public float player_Points = 0;
     // Start is called before the first frame update
@@ -20,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
         if (down == KeyCode.None) down = KeyCode.DownArrow;
         myRB = GetComponent<Rigidbody2D>();
         SetMinMax();
+        //transform.position = startPosition;
     }
 
     // Update is called once per frame
@@ -55,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
         else if (other.tag == "Enemy")
         {
             EnemyGenerator.instance.ManageEnemy(other.gameObject.GetComponent<EnemyController>(), this);
-           
+            transform.position = new Vector3(-5, 0,0);
         }
     }
 }
